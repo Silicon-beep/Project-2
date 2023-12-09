@@ -24,3 +24,4 @@ func ChangeDirectory(args ...string) error {
 		return fmt.Errorf("%w: expected zero or one arguments (directory)", ErrInvalidArgCount)
 	}
 }
+
