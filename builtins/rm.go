@@ -5,7 +5,7 @@ import (
   "os"
 )
 
-// RemoveFile implements the rm command.
+
 func RemoveFile(args ...string) error {
   if len(args) == 0 {
     return fmt.Errorf("Usage: rm <file1> [<file2> ...]")
