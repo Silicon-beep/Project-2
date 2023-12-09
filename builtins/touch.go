@@ -1,25 +1,16 @@
 package builtins
-
 import (
   "fmt"
   "os"
-  "testing"
 )
-
-func TouchFile(fileName string) error {
-  file, err := os.Create(fileName)
-  if err != nil {
-    return err
+func TouchFile(args ...string) error {
+  for _, file := range args {
+    f, err := os.Create(file)
+    if err != nil {
+      return fmt.Errorf("Error creating file %s: %v", file, err)
+    }
+    f.Close()
   }
-  defer file.Close()
   return nil
 }
 
-func TestTouchFile(t *testing.T) {
-  fileName := "testFile.txt"
-  if err := TouchFile(fileName); err != nil {
-    t.Errorf("TouchFile() error = %v, want nil", err)
-  }
-
-  // Add assertions to check if the file "testFile.txt" was successfully created
-}
