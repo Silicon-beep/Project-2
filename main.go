@@ -9,7 +9,6 @@ import (
 	"os/user"
 	"strings"
         "github.com/Silicon-beep/Project-2/tree/main/builtins"
-
 	//"github.com/jh125486/CSCE4600/Project2/builtins"
 )
 
@@ -90,7 +89,7 @@ func handleInput(w io.Writer, input string, exit chan<- struct{}) error {
   case "rm":
     return builtins.RemoveFile(args...)
   case "ls":
-    return builtins.ListFiles(w)
+    return builtins.List(args...)
   case "mkdir":
     return builtins.MakeDirectory(args...)
 	}
@@ -109,3 +108,4 @@ func executeCommand(name string, arg ...string) error {
 	// Execute the command and return the error.
 	return cmd.Run()
 }
+
