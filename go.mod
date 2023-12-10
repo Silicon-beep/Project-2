@@ -1,0 +1,15 @@
+module main
+
+go 1.19
+
+require (
+	github.com/Silicon-beep/Project-2 v0.0.0-20231210002729-80f805bedc2c
+	github.com/jh125486/CSCE4600 v0.0.0-20230815011650-54991d2ad9a9
+	github.com/stretchr/testify v1.8.4
+)
+
+require (
+	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/pmezard/go-difflib v1.0.0 // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
+)
