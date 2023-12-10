@@ -8,8 +8,9 @@ import (
 	"os/exec"
 	"os/user"
 	"strings"
-  //"github.com/FatimaShibli/Project2/Project2/builtins"
-	"github.com/jh125486/CSCE4600/Project2/builtins"
+        "github.com/Silicon-beep/Project-2/tree/main/builtins"
+
+	//"github.com/jh125486/CSCE4600/Project2/builtins"
 )
 
 func main() {
